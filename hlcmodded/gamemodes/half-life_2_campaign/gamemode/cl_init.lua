@@ -4,7 +4,7 @@ include( "cl_calcview.lua" )
 include( "cl_playermodels.lua" )
 include( "cl_scoreboard.lua" )
 include( "cl_viewmodel.lua" )
-
+include( "cl_menushka.lua" )
 
 -- Create data folders
 if ( !file.IsDir( "half-life_2_campaign", "DATA" ) ) then

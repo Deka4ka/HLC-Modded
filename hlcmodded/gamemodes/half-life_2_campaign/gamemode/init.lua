@@ -1,6 +1,7 @@
 -- Send the required lua files to the client
 AddCSLuaFile( "cl_calcview.lua" )
 AddCSLuaFile( "cl_init.lua" )
+AddCSLuaFile( "cl_menushka.lua" )
 AddCSLuaFile( "cl_playermodels.lua" )
 AddCSLuaFile( "cl_scoreboard.lua" )
 AddCSLuaFile( "cl_scoreboard_playerlist.lua" )
