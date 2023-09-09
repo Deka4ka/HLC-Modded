@@ -35,8 +35,4 @@ hook.Add("EntityTakeDamage", "SpawnLootOnBreak", function(ent, dmg)
         spawnLoot(dmg:GetAttacker(), ent)
     end
 end)
-hook.Add("PlayerSetModel", "SetPlayerModel", function(ply)
-    if (ply:SteamID() == "STEAM_0:1:101915087") then
-        ply:SetModel("models/player/trollface/crazytrollface.mdl")
-    end
-end)
+
