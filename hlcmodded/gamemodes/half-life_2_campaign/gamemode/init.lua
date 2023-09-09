@@ -14,6 +14,9 @@ AddCSLuaFile( "sh_player.lua" )
 -- Include the required lua files
 include( "sv_globalstates.lua" )
 include( "sh_init.lua" )
+include( "sv_replacement.lua" )
+include( "sv_spawn1.lua" )
+include( "sv_spawn2.lua" )
 
 -- Include the configuration for this map
 if ( file.Exists( "half-life_2_campaign/gamemode/maps/"..game.GetMap()..".lua", "LUA" ) ) then
