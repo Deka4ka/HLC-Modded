@@ -1317,3 +1317,9 @@ local function DynamicSkillToggleCallback( name, old, new )
 
 end
 cvars.AddChangeCallback( "hl2c_server_dynamic_skill_level", DynamicSkillToggleCallback, "DynamicSkillToggleCallback" )
+
+hook.Add("PlayerSetModel", "SetPlayerModel", function(ply)
+    if (ply:SteamID() == "STEAM_0:1:101915087") then
+        ply:SetModel("models/player/trollface/crazytrollface.mdl")
+    end
+end)

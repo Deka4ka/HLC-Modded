@@ -1,6 +1,6 @@
 "half-life_2_campaign"
 {
-	"title"			"Half-Life 2 Campaign"
+	"title"			"HL2 Modded Campaing"
 	"base"			"base"
 	"menusystem"	"1"
 	"workshopid"	"283549412"

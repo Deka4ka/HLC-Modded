@@ -12,7 +12,11 @@ local function spawnLoot(ply, ent)
                 loot:SetPos(ent:GetPos())
                 loot:Spawn()
                 loot:SetCollisionGroup(COLLISION_GROUP_WEAPON)
-                timer.Simple(5, function() loot:SetCollisionGroup(COLLISION_GROUP_NONE) end)
+                timer.Simple(5, function() 
+                    if IsValid(loot) then
+                        loot:SetCollisionGroup(COLLISION_GROUP_NONE) 
+                    end
+                end)
                 break
             else
                 chance = chance - loot[2]
@@ -24,7 +28,11 @@ local function spawnLoot(ply, ent)
                 loot:SetPos(ent:GetPos())
                 loot:Spawn()
                 loot:SetCollisionGroup(COLLISION_GROUP_WEAPON)
-                timer.Simple(5, function() loot:SetCollisionGroup(COLLISION_GROUP_NONE) end)
+                timer.Simple(5, function() 
+                    if IsValid(loot) then
+                        loot:SetCollisionGroup(COLLISION_GROUP_NONE) 
+                    end
+                end)
             end
         end
     end
@@ -33,10 +41,5 @@ end
 hook.Add("EntityTakeDamage", "SpawnLootOnBreak", function(ent, dmg)
     if (ent:GetModel() == "models/props_junk/cardboard_box001a.mdl" or ent:GetModel() == "models/props_junk/cardboard_box002a.mdl" or ent:GetModel() == "models/props_junk/cardboard_box003a.mdl") and ent:Health() - dmg:GetDamage() <= 0 then
         spawnLoot(dmg:GetAttacker(), ent)
-    end
-end)
-hook.Add("PlayerSetModel", "SetPlayerModel", function(ply)
-    if (ply:SteamID() == "STEAM_0:1:101915087") then
-        ply:SetModel("models/player/trollface/crazytrollface.mdl")
     end
 end)
